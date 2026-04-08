@@ -181,5 +181,5 @@ Agent-travel/
 ```
 
 ## Acknowledgement
-本项目的代码参考了先前工作：[FlyAIBox](https://github.com/FlyAIBox/Agent_In_Action/tree/main/03-agent-build-docker-deploy))
+本项目的代码参考了开源工作：[FlyAIBox](https://github.com/FlyAIBox/Agent_In_Action/tree/main/03-agent-build-docker-deploy)
 
