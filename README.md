@@ -11,18 +11,7 @@
 - 短期记忆可落 Redis，最终结果可落 PostgreSQL
 - 支持 OpenAI 兼容模型、DuckDuckGo 搜索、MCP 天气工具
 
-## 适用场景
-
-这个项目适合用于：
-
-- 旅行规划 Agent 系统原型
-- 多 Agent 协作架构教学与实验
-- 带状态流和事件流的智能体后端参考实现
-- 结合 MCP、RAG、Redis、PostgreSQL 的完整应用示例
-
 ## 当前架构
-
-本项目已经从早期的串行调度模式升级为：
 
 `共享会话 + Agent 私有上下文 + 并发分析 + 串行整合 + 协调员终审`
 
@@ -155,13 +144,6 @@ graph TD
 - Python 3.10+
 - Anaconda 环境：`agent-travel`
 
-### 安装依赖
-
-```bash
-pip install -r backend/requirements.txt
-pip install -r frontend/requirements.txt
-```
-
 ### 常用环境变量
 
 ```bash
@@ -182,20 +164,6 @@ POSTGRES_DB=postgres
 QWEATHER_API_KEY=your_qweather_key
 ```
 
-### 启动后端
-
-```bash
-cd backend
-python api_server.py
-```
-
-### 启动前端
-
-```bash
-cd frontend
-streamlit run streamlit_app.py
-```
-
 ## 项目结构
 
 ```text
@@ -210,26 +178,8 @@ Agent-travel/
 ├─ frontend/
 │  └─ streamlit_app.py
 ├─ knowledge-rag/
-├─ docs/
-├─ start_backend.ps1
-├─ start_frontend.ps1
-└─ GITHUB_PROJECT_OVERVIEW.md
 ```
 
-## 当前特色能力
+## Acknowledgement
+本项目的代码参考了先前工作：[FlyAIBox](https://github.com/FlyAIBox/Agent_In_Action/tree/main/03-agent-build-docker-deploy))
 
-- 保留本地专家 `skill` 和 `RAG` 设计
-- 天气模块支持 MCP 调用与 HTTP 兜底
-- 事件流支持前端实时可视化
-- 已支持 Redis + PostgreSQL 接入
-- 结果不仅保存文件，也可保存结构化数据库记录
-
-## 后续可扩展方向
-
-- 将短期记忆改为关键阶段实时 checkpoint 到 Redis
-- 将 SSE 事件源从进程内内存迁移到 Redis Stream
-- 支持多实例部署下的统一任务状态管理
-- 增加自动化测试和回归验证
-- 增加面向产品化的用户会话管理能力
-
-## License
