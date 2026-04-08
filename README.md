@@ -137,9 +137,8 @@ graph TD
 - Cache / State: Redis
 - Final Storage: PostgreSQL
 
-## 启动方式
 
-### 环境建议
+## 环境建议
 
 - Python 3.10+
 - Anaconda 环境：`agent-travel`
